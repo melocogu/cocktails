@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gistihusid Cocktails</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            text-align: center; /* Center everything in the body horizontally */
+        }
+
+        h1, h2, h3 {
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cocktail {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .image-container {
+            height: 220px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cocktail img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            transition: transform 0.2s ease;
+        }
+
+        .cocktail:hover img {
+            transform: scale(1.05);
+        }
+
+        .cocktail:hover {
+            transform: scale(1.03);
+        }
+
+        .cocktail h3 {
+            margin: 10px 0 0;
+            font-size: 22px;
+            color: #333;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .cocktail {
+                height: 260px;
+            }
+
+            .image-container {
+                height: 180px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .grid {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Gistihusid Cocktails</h1>
+
+    <div class="grid">
+        <div class="cocktail"><a href="recipe1.html"><div class="image-container"><img src="cocktail images/mojito.png" alt="Mojito"></div><h3>Mojito</h3></a></div>
+        <div class="cocktail"><a href="recipe2.html"><div class="image-container"><img src="cocktail images/aperol.png" alt="Aperol Spritz"></div><h3>Aperol Spritz</h3></a></div>
+        <div class="cocktail"><a href="recipe3.html"><div class="image-container"><img src="cocktail images/negroni.png" alt="Cocktail 3"></div><h3>Negroni</h3></a></div>
+        <div class="cocktail"><a href="recipe4.html"><div class="image-container"><img src="cocktail images/paloma.png" alt="Cocktail 4"></div><h3>Paloma</h3></a></div>
+        <div class="cocktail"><a href="recipe5.html"><div class="image-container"><img src="cocktail images/mule.png" alt="Cocktail 5"></div><h3>Shire Mule</h3></a></div>
+        <div class="cocktail"><a href="recipe6.html"><div class="image-container"><img src="cocktail images/spicylover.png" alt="Cocktail 6"></div><h3>Spicy Lover</h3></a></div>
+        <div class="cocktail"><a href="recipe7.html"><div class="image-container"><img src="cocktail images/mangobliss.png" alt="Cocktail 7"></div><h3>Mango Bliss</h3></a></div>
+        <div class="cocktail"><a href="recipe8.html"><div class="image-container"><img src="cocktail images/lovepotion.png" alt="Cocktail 8"></div><h3>Love Potion</h3></a></div>
+        <div class="cocktail"><a href="recipe9.html"><div class="image-container"><img src="cocktail images/hugoboss.png" alt="Cocktail 9"></div><h3>Hugo Boss</h3></a></div>
+        <div class="cocktail"><a href="recipe10.html"><div class="image-container"><img src="cocktail images/winnie.png" alt="Cocktail 10"></div><h3>Winnie the Pooh</h3></a></div>
+        <div class="cocktail"><a href="recipe11.html"><div class="image-container"><img src="cocktail11.jpg" alt="Cocktail 11"></div><h3>Cocktail 11</h3></a></div>
+        <div class="cocktail"><a href="recipe12.html"><div class="image-container"><img src="cocktail12.jpg" alt="Cocktail 12"></div><h3>Cocktail 12</h3></a></div>
+        <div class="cocktail"><a href="recipe13.html"><div class="image-container"><img src="cocktail13.jpg" alt="Cocktail 13"></div><h3>Cocktail 13</h3></a></div>
+        <div class="cocktail"><a href="recipe14.html"><div class="image-container"><img src="cocktail14.jpg" alt="Cocktail 14"></div><h3>Cocktail 14</h3></a></div>
+        <div class="cocktail"><a href="recipe15.html"><div class="image-container"><img src="cocktail15.jpg" alt="Cocktail 15"></div><h3>Cocktail 15</h3></a></div>
+        <div class="cocktail"><a href="recipe16.html"><div class="image-container"><img src="cocktail16.jpg" alt="Cocktail 16"></div><h3>Cocktail 16</h3></a></div>
+        <div class="cocktail"><a href="recipe17.html"><div class="image-container"><img src="cocktail17.jpg" alt="Cocktail 17"></div><h3>Cocktail 17</h3></a></div>
+        <div class="cocktail"><a href="recipe18.html"><div class="image-container"><img src="cocktail18.jpg" alt="Cocktail 18"></div><h3>Cocktail 18</h3></a></div>
+        <div class="cocktail"><a href="recipe19.html"><div class="image-container"><img src="cocktail19.jpg" alt="Cocktail 19"></div><h3>Cocktail 19</h3></a></div>
+        <div class="cocktail"><a href="recipe20.html"><div class="image-container"><img src="cocktail20.jpg" alt="Cocktail 20"></div><h3>Cocktail 20</h3></a></div>
+    </div>
+
+</body>
+</html>
