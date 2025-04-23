@@ -6,7 +6,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: center;
     background-color: #f7f7f7;
 }
 
@@ -26,6 +25,8 @@ h1, h2, h3 {
 
 h1 {
     color: #333;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .home-btn {
@@ -34,8 +35,10 @@ h1 {
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 30px;
     display: inline-block;
+    font-size: 16px;
+    text-align: center;
 }
 
 .content-row {
@@ -44,12 +47,12 @@ h1 {
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
-    text-align: left;
     margin-top: 20px;
 }
 
 .text-column {
     flex: 1 1 55%;
+    text-align: left;
 }
 
 .image-column {
@@ -66,7 +69,7 @@ h1 {
     box-shadow: none;
 }
 
-/* 📱 Light mobile adjustments only */
+/* 📱 Responsivo apenas para TÍTULO, IMAGEM e BOTÃO no telemóvel */
 @media (max-width: 768px) {
     .recipe-container {
         width: 90%;
@@ -79,17 +82,25 @@ h1 {
     }
 
     .home-btn {
-        padding: 8px 16px;
+        padding: 10px 20px;
+        font-size: 15px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .content-row {
         flex-direction: column;
-        text-align: center;
     }
 
-    .text-column,
+    .text-column {
+        width: 100%;
+        text-align: left;
+    }
+
     .image-column {
         width: 100%;
+        justify-content: center;
     }
 
     .cocktail-img {
