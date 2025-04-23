@@ -1,0 +1,154 @@
+/* style.css */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.page-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Nunito', sans-serif;
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .page-container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+}
+
+.cocktail {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    margin: 0 auto;
+}
+
+.cocktail a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container {
+    height: 220px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cocktail img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.cocktail:hover img {
+    transform: scale(1.05);
+}
+
+.cocktail:hover {
+    transform: scale(1.03);
+}
+
+.cocktail h3 {
+    margin: 10px 0 0;
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .cocktail {
+        height: 260px;
+    }
+
+    .image-container {
+        height: 180px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .grid {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cocktail {
+        height: 220px;
+        padding: 8px;
+    }
+
+    .image-container {
+        height: 140px;
+    }
+
+    .cocktail h3 {
+        font-size: 16px;
+    }
+}
+``
