@@ -1,4 +1,4 @@
-/* Reset e base */
+/* Reset and base */
 * {
     box-sizing: border-box;
 }
@@ -11,22 +11,25 @@ body {
     font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
     background-color: #f9f9f9;
+    text-align: center;
 }
 
-/* Container geral das páginas */
-.page-container {
+/* Containers */
+.page-container,
+.recipe-container {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Typography */
 h1, h2, h3 {
     font-family: 'Nunito', sans-serif;
+    margin: 0.5em 0;
 }
 
-/* Grelha de cocktails */
+/* Grid layout for index */
 .grid {
     display: grid;
     gap: 20px;
@@ -43,25 +46,18 @@ h1, h2, h3 {
 @media (max-width: 768px) {
     .grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-        padding: 15px;
     }
 }
 
 @media (max-width: 480px) {
     .grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 10px;
+        gap: 12px;
         padding: 10px;
-    }
-
-    h1 {
-        font-size: 20px;
-        margin: 10px 0;
     }
 }
 
-/* Cartões de cocktail */
+/* Cocktail card styling */
 .cocktail {
     background-color: white;
     border-radius: 10px;
@@ -72,7 +68,6 @@ h1, h2, h3 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
 
@@ -86,7 +81,6 @@ h1, h2, h3 {
 
 .image-container {
     height: 220px;
-    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,12 +102,12 @@ h1, h2, h3 {
 }
 
 .cocktail h3 {
-    margin: 10px 0 0;
     font-size: 22px;
     color: #333;
-    text-align: center;
+    margin: 10px 0 0;
 }
 
+/* Adjustments for smaller screens */
 @media (max-width: 768px) {
     .cocktail {
         height: 260px;
@@ -123,23 +117,23 @@ h1, h2, h3 {
         height: 180px;
     }
 
-    h1 {
-        font-size: 24px;
-    }
-
-    .grid {
-        padding: 10px;
+    .cocktail h3 {
+        font-size: 18px;
     }
 }
 
 @media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+        margin-top: 15px;
+    }
+
     .cocktail {
-        height: 220px;
-        padding: 8px;
+        height: 230px;
     }
 
     .image-container {
-        height: 140px;
+        height: 150px;
     }
 
     .cocktail h3 {
@@ -147,30 +141,20 @@ h1, h2, h3 {
     }
 }
 
-/* Página de receita individual */
-.recipe-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
+/* Recipe pages */
 .content-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
-    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    text-align: left;
 }
 
-.text-column, .image-column {
+.text-column,
+.image-column {
     flex: 1;
     min-width: 280px;
-}
-
-.ingredients, .instructions {
-    text-align: left;
-    padding: 10px;
 }
 
 .cocktail-img {
@@ -180,7 +164,30 @@ h1, h2, h3 {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Botão "Go Back Home" */
+/* MOBILE tweak for image and text centering */
+@media (max-width: 480px) {
+    .content-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-column, .image-column {
+        width: 100%;
+    }
+
+    .cocktail-img {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+/* Back home button */
 .home-btn {
     display: inline-block;
     margin-top: 30px;
@@ -198,12 +205,8 @@ h1, h2, h3 {
 }
 
 @media (max-width: 480px) {
-    .cocktail-img {
-        max-width: 250px;
-    }
-
     .home-btn {
-        padding: 10px 20px;
         font-size: 14px;
+        padding: 10px 20px;
     }
 }
