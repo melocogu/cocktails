@@ -1,0 +1,121 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f7f7f7;
+}
+
+h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+}
+
+.recipe-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    margin-top: 20px;
+    text-align: center; /* garante que o botão fique centrado */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.home-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.content-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.text-column {
+    flex: 1 1 55%;
+    text-align: left;
+}
+
+.image-column {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cocktail-img {
+    max-width: 100%;
+    max-height: 350px;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+/* 📱 Responsivo para dispositivos menores */
+@media (max-width: 768px) {
+    .recipe-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .home-btn {
+        font-size: 15px;
+    }
+
+    .content-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-column {
+        width: 100%;
+        text-align: left;
+    }
+
+    .image-column {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cocktail-img {
+        max-height: 260px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .cocktail-img {
+        max-height: 200px;
+    }
+
+    .home-btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
